@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Scroll Fade-In Animation</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Create enough scrolling space for demonstration */
+    font-family: Arial, sans-serif;
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+    </style>
+</head>
+<body>
+    <div class="fade-in-element">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a sample scroll fade-in animation.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

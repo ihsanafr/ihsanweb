@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .portfolio-item {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            transition: transform 0.5s;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <section class="content">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </section>
+    <section class="content">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-item">Project 1</div>
+        <div class="portfolio-item">Project 2</div>
+        <div class="portfolio-item">Project 3</div>
+    </section>
+    <section class="content">
+        <h2>Contact</h2>
+        <p>Contact me at: example@email.com</p>
+    </section>
+    <script>
+        window.addEventListener("scroll", () => {
+            const portfolioItems = document.querySelectorAll(".portfolio-item");
+            const triggerBottom = (window.innerHeight / 5) * 4;
+
+            portfolioItems.forEach((item) => {
+                const itemTop = item.getBoundingClientRect().top;
+
+                if (itemTop < triggerBottom) {
+                    item.classList.add("show");
+                } else {
+                    item.classList.remove("show");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

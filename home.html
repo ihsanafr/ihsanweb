@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+        }
+
+        .navbar {
+            width: 100vw;
+            height: 10vh;
+            background-image: url(bg.png);
+            background-size: cover;
+            display: flex;
+        }
+
+        .navbar-brand {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding-right: 200px;
+            align-items: center;
+        }
+
+        .navbar-item {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            display: inline;
+            margin: 15px;
+        }
+
+        .list-item {
+            font-weight: 600;
+        }
+
+
+        li a {
+            text-decoration: none;
+            color: blueviolet;
+        }
+
+        li a:hover {
+            color: white;
+        }
+
+        .home-item {
+            padding: 10px 20px;
+            background-color: blueviolet;
+            border-radius: 1000px;
+            color: white;
+        }
+
+        .home-item:hover {
+            color: blueviolet;
+            background-color: white;
+        }
+
+
+        .hero {
+            width: 100vw;
+            height: 90vh;
+            background-image: url(bg.png);
+            background-size: cover;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .area-tittle {
+            width: 50%;
+            padding: 100px;
+            margin-left: 20px;
+            margin-top: 15px;
+            background: #ffee0000;
+
+        }
+
+        .text-hello {
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.465);
+            color: white;
+        }
+
+        .text-title {
+            font-size: 5em;
+            color: blueviolet;
+            text-shadow: 5px 5px 20px rgba(137, 43, 226, 0.481);
+            font-family: Poppins;
+            font-weight: 800;
+            line-height: 75px;
+
+        }
+
+        .text-tagline {
+            font-size: 1.4em;
+            margin-top: 30px;
+            font-weight: 600;
+            color: white;
+            text-shadow: 3px 3px 20px #00000097;
+        }
+
+        .button-explore {
+            margin-top: 40px;
+        }
+
+        .btn-about {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 30px;
+            text-decoration: none;
+            background-color: blueviolet;
+            padding: 10px 20px;
+        }
+
+        .btn-about:hover {
+            background: white;
+            color: blueviolet;
+        }
+
+        .btn-contact {
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: solid blueviolet;            
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+
+        .btn-contact:hover{
+            border: solid white;
+            color: white;
+        }
+
+        .img-brand {
+            padding-right: 60px;
+            padding-top: 40px;
+        }
+
+        .area-img {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .hero2{
+            width: 100vw;
+            height: 80vh;
+            background : white;
+            background-size: cover;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .about-tittle{
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: 10vh;
+            background-color: rgba(246, 0, 0, 0);
+            margin: 10px;
+        }
+
+        .tittle-about{
+            color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            padding: 10px;
+            justify-content: center;
+            font-weight: bold;
+            background-color: blueviolet;
+            border-radius: 20px;
+            height: 40px;
+            box-shadow: 10px 10px 10px black;
+            margin-top: 20px;
+            width: 480px;
+        }
+
+        .tittle-about:hover{
+            background-color: white;
+            color: blueviolet;
+        }
+
+        .img-brand2{
+            padding-left: 80px;
+            padding-top: 100px;
+        }
+
+        .area-tittle2{
+            width: 50%;
+            padding: 80px;
+            margin-left: 20px;
+            background: #ffee0000;
+        }
+        
+        .text-title2{
+            font-size: 3em;
+            color: rgb(255, 255, 255);
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.481);
+            font-family: Poppins;
+            font-weight: 800;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: blueviolet;
+            line-height: 75px;
+        }
+
+        .text-tagline2{
+            font-size: 1em;
+            margin-top: 30px;
+            font-weight: 600;
+            color: blueviolet;
+        }
+
+        .button-explore2{
+            margin-top: 50px;
+        }
+        .btn-port{
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 50px;
+            padding: 10px;
+            color: blueviolet;
+            border: solid blueviolet;
+            border-radius: 30px;
+        }
+        .btn-port:hover{
+            color: white;
+            background-color: blueviolet;
+        }
+
+        .btn-contact2{
+            font-weight: bold;
+            font-size: 1em;
+            margin: 10px;
+            border: solid blueviolet;
+            text-decoration: none;
+            background-color: blueviolet;
+            border-radius: 30px;
+            color: white;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 10px;
+        }
+
+        .btn-contact2:hover{
+            background-color: white;
+            border: solid blueviolet;
+            color: blueviolet;
+        }
+
+        .hero3{
+            width: 100vw;
+            height: 90vh;
+            justify-content:center;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-tittle{
+            width: 100vw;
+            padding: 10px;
+            height: 40vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .service-tittle1{
+            background-color: blueviolet;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            display: flex;
+            color: white;
+            padding: 10px;
+            box-shadow: 10px 10px 10px black;
+            width: 490px;
+        }
+
+        .service-tittle2{
+            padding: 30px;
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 1.4em;
+            text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.358);
+        }
+
+        .card-area{
+            width:100% ;
+            margin-top: 20px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .card1{
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.376);
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 350px;
+        }
+        .ctext1{
+            color: blueviolet;
+            padding-top: 15px;
+        }
+        .cinfo1{
+            font-weight: 600;
+        }
+        .card2{
+            background-color: white;
+            margin-right: 60px;
+            margin-left: 60px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.376);
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 350px;
+        }
+        .card3{
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.376);
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 350px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">
+            <img src="figlog.png" height="40px" alt="">
+        </div>
+        <div class="navbar-item">
+            <div class="list-item">
+                <ul>
+                    <li><a class="home-item" href="#">Home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">service</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="area-tittle">
+            <div class="text-hello">
+                <p>Welcome To My</p>
+            </div>
+            <div class="text-title">
+                <p>Personal<br> Website </br></p>
+            </div>
+            <div class="text-tagline">
+                <p>All information about me</p>
+            </div>
+            <div class="button-explore">
+                <a href="#" class="btn-about">About Me</a>
+                <a href="#" class="btn-contact">Contact</a>
+            </div>
+        </div>
+        <div class="area-img">
+            <div class="img-brand">
+                <img src="Me.png" width="500px" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="about-tittle">
+        <div class="tittle-about">
+            <p>About Me</p>
+        </div>
+    </div>
+    <div class="hero2">
+        
+        <div class="area-img">
+            <div class="img-brand2">
+                <img src="Me2.png" width="450px" alt="">
+            </div>
+        </div>
+        <div class="area-tittle2">
+            <div class="text-title2">
+                <p> Hi!,I'm Ihsan</p>
+            </div>
+            <div class="text-tagline2">
+                <p>Ihsan ahmad fakhriansyah.a 15-year-old student studying at IDN boarding school, born in Jakarta April 24, 2008, lives in Bekasi, the second child of 3 siblings. has a hobby of reading, writing, coding, design, and others</p>
+            </div>
+            <div class="button-explore2">
+                <a href="#" class="btn-port">My Portfolio</a>
+                <a href="#" class="btn-contact2">contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero3">
+        <div class="service-tittle">
+            <div class="service-tittle1">
+                <h1>My skill</h1>
+            </div>
+            <div class="service-tittle2">
+                <p>I have a lot of experience to do several things</p>
+            </div>
+            <div class="card-area">
+                <div class="card1">
+                    <div class="cimg1">
+                        <img src="2d3d.png" width="50px" alt=""> </div>
+                    <div class="ctext1">
+                        <h3>2D & 3D Design</h3></div>
+                    <div class="cinfo1"><center><p>I can make several <br>designs in 2d and 3d</p></center></div>
+                </div>
+                <div class="card2">
+                    <div class="cimg1">
+                        <img src="web.png" width="60px" alt=""> </div>
+                    <div class="ctext1">
+                        <h3>2D & 3D Design</h3></div>
+                    <div class="cinfo1"><center><p>I can make several <br>designs in 2d and 3d</p></center></div>
+                </div>
+                <div class="card3">
+                    <div class="cimg1">
+                        <img src="2d3d.png" width="50px" alt=""> </div>
+                    <div class="ctext1">
+                        <h3>2D & 3D Design</h3></div>
+                    <div class="cinfo1"><center><p>I can make several <br>designs in 2d and 3d</p></center></div>
+                </div>
+            </div>
+
+        </div>
+        .
+    </div>
+
+
+
+
+</body>
+
+</html>
